@@ -9,7 +9,7 @@ import { User } from './user';
 export class PersonService {
   constructor(private http: HttpClient) {}
 
-  ROOT_URL = 8080;
+  ROOT_URL = '';
 
   User = {
     username: String,
