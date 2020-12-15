@@ -1,0 +1,49 @@
+<div class="sidenav">
+  <div class="login-main-text">
+    <h2>
+      Application<br />
+      Login Page
+    </h2>
+    <p>Login or register from here to access.</p>
+  </div>
+</div>
+<div class="main">
+  <div class="col-md-6 col-sm-12">
+    <div class="login-form">
+      <form (ngSubmit)="onSubmit(Form)" #Form="ngForm">
+        <div class="form-group">
+          <label>User Name</label>
+          <input
+            type="text"
+            class="form-control"
+            ngModel
+            name="userName"
+            #userName="ngModel"
+            placeholder="User Name"
+          />
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <input
+            required
+            type="password"
+            ngModel
+            name="password"
+            #password="ngModel"
+            class="form-control"
+            placeholder="Password"
+          />
+          <div>
+            <h2 class="font-weight-light">
+              <a routerLink="../register">Register</a>
+            </h2>
+            <h3 class="font-weight-light">
+              {{ state }}
+            </h3>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-black">Login</button>
+      </form>
+    </div>
+  </div>
+</div>

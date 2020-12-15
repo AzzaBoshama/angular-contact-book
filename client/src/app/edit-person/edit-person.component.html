@@ -1,0 +1,63 @@
+<div class="sidenav">
+  <div class="login-main-text">
+    <h2>Edit Person</h2>
+    <p>Edit Person details on the database</p>
+  </div>
+</div>
+<div class="main">
+  <div class="col-md-6 col-sm-12">
+    <div class="login-form">
+      <form (ngSubmit)="onSubmit(Form)" #Form="ngForm">
+        <div class="form-group">
+          <label>name</label>
+          <input
+            type="text"
+            class="form-control"
+            ngModel
+            name="name"
+            #name="ngModel"
+            placeholder="{{ person?.Name }}"
+            required
+          />
+
+          <label>Number</label>
+          <input
+            type="text"
+            class="form-control"
+            ngModel
+            name="number"
+            #number="ngModel"
+            required
+            placeholder="{{ person?.Number }}"
+          />
+
+          <label>Job</label>
+          <input
+            type="text"
+            class="form-control"
+            ngModel
+            name="job"
+            #job="ngModel"
+            placeholder="{{ person?.Job }}"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label>Location</label>
+          <input
+            type="text"
+            ngModel
+            name="location"
+            #location="ngModel"
+            class="form-control"
+            placeholder="{{ person?.Location }}"
+          />
+        </div>
+        <div>
+          <h1>{{ state }}</h1>
+        </div>
+        <button type="submit" class="btn btn-black">Edit a person</button>
+      </form>
+    </div>
+  </div>
+</div>

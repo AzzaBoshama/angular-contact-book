@@ -1,0 +1,66 @@
+<div class="col-md-4 col-md-offset-4" id="login">
+  <section id="inner-wrapper" class="login">
+    <article>
+      <form (ngSubmit)="onSubmit(Form)" #Form="ngForm">
+        <div class="form-group">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-user"> </i></span>
+            <input
+              type="text"
+              class="form-control"
+              ngModel
+              name="name"
+              #name="ngModel"
+              placeholder="Name"
+            />
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="input-group">
+            <span class="input-group-addon"
+              ><i class="fa fa-envelope"> </i
+            ></span>
+            <input
+              type="email"
+              ngModel
+              name="email"
+              #email
+              class="form-control"
+              placeholder="Email Address"
+            />
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-key"> </i></span>
+            <input
+              type="password"
+              class="form-control"
+              ngModel
+              name="password"
+              #password
+              placeholder="Password"
+            />
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-key"> </i></span>
+            <input
+              type="password"
+              class="form-control"
+              ngModel
+              name="password1"
+              #password1
+              placeholder="Confirm Password"
+            />
+          </div>
+        </div>
+        <div>
+          <h1 class="font-weight-light">{{ warning }}</h1>
+        </div>
+        <button type="submit" class="btn btn-success btn-block">Submit</button>
+      </form>
+    </article>
+  </section>
+</div>
