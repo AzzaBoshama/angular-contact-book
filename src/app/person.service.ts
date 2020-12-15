@@ -9,7 +9,7 @@ import { User } from './user';
 export class PersonService {
   constructor(private http: HttpClient) {}
 
-  ROOT_URL = 'http://localhost:3000';
+  ROOT_URL = process.env.PORT || 8080;
 
   User = {
     username: String,
